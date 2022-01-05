@@ -103,6 +103,14 @@ or, for newer versions of Gradle:
 ```
 purgeSnapshots=1 ./gradlew test
 ```
+
+## Failing on Missing Snapshots
+In order to fail if a snapshot does not exist, you just need to execute your tests like this:
+
+```
+failOnMissingSnapshots=1 ./gradlew test
+```
+
 ## Contributing
 
 ### Linting and formatting
