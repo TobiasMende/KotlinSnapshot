@@ -26,14 +26,15 @@ cache:
 jobs:
   include:
     - stage: test
-      jdk: oraclejdk9
+      jdk: oraclejdk11
       name: Basic Checks
       script:
         - ./gradlew ktlint test
     - stage: test
-      jdk: oraclejdk8
+      jdk: oraclejdk11
       name: AndroidConsumer
       language: android
+      dist: trusty
       android:
         # Please keep these as slim as possible as they SIGNIFICANTLY slow down the build
         components:
@@ -45,7 +46,7 @@ jobs:
         - cd AndroidConsumer
         - ./gradlew test
     - stage: test
-      jdk: oraclejdk9
+      jdk: oraclejdk11
       name: KotlinConsumer
       script:
         - cd KotlinConsumer
