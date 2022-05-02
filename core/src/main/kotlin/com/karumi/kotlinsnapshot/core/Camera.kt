@@ -11,7 +11,9 @@ internal class Camera(
     private val extractor: TestCaseExtractor,
     private val testClassAsDirectory: Boolean = false,
     private val relativePath: String = "",
-    private val snapshottingProperties: SnapshottingProperties = SystemSnapshottingProperties()
+    private val snapshottingProperties: SnapshottingProperties = SystemSnapshottingProperties(
+        JavaSystem
+    )
 ) {
     private val snapshotDir: File
     private val dmp = DiffMatchPatch()
