@@ -39,7 +39,7 @@ jobs:
       - name: Test
         working-directory: SpringConsumer
         env:
-          updateSnapshots: 1
+          updateSnapshots: true
         run: ./gradlew test
 
   AndroidConsumer-Checks:
